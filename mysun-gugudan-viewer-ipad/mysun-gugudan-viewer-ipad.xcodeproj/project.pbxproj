@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BDBBC94E20B59C8F000C79CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBBC94D20B59C8F000C79CC /* AppDelegate.swift */; };
+		BDBBC95020B59C8F000C79CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBBC94F20B59C8F000C79CC /* ViewController.swift */; };
+		BDBBC95320B59C8F000C79CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDBBC95120B59C8F000C79CC /* Main.storyboard */; };
+		BDBBC95520B59C90000C79CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBBC95420B59C90000C79CC /* Assets.xcassets */; };
+		BDBBC95820B59C90000C79CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDBBC95620B59C90000C79CC /* LaunchScreen.storyboard */; };
+		BDBBC96320B59C90000C79CC /* mysun_gugudan_viewer_ipadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBBC96220B59C90000C79CC /* mysun_gugudan_viewer_ipadTests.swift */; };
+		BDBBC96E20B59C90000C79CC /* mysun_gugudan_viewer_ipadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBBC96D20B59C90000C79CC /* mysun_gugudan_viewer_ipadUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDBBC95F20B59C90000C79CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDBBC94220B59C8F000C79CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDBBC94920B59C8F000C79CC;
+			remoteInfo = "mysun-gugudan-viewer-ipad";
+		};
+		BDBBC96A20B59C90000C79CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDBBC94220B59C8F000C79CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDBBC94920B59C8F000C79CC;
+			remoteInfo = "mysun-gugudan-viewer-ipad";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BDBBC94A20B59C8F000C79CC /* mysun-gugudan-viewer-ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mysun-gugudan-viewer-ipad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDBBC94D20B59C8F000C79CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDBBC94F20B59C8F000C79CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDBBC95220B59C8F000C79CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDBBC95420B59C90000C79CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDBBC95720B59C90000C79CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDBBC95920B59C90000C79CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDBBC95E20B59C90000C79CC /* mysun-gugudan-viewer-ipadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mysun-gugudan-viewer-ipadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDBBC96220B59C90000C79CC /* mysun_gugudan_viewer_ipadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mysun_gugudan_viewer_ipadTests.swift; sourceTree = "<group>"; };
+		BDBBC96420B59C90000C79CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDBBC96920B59C90000C79CC /* mysun-gugudan-viewer-ipadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mysun-gugudan-viewer-ipadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDBBC96D20B59C90000C79CC /* mysun_gugudan_viewer_ipadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mysun_gugudan_viewer_ipadUITests.swift; sourceTree = "<group>"; };
+		BDBBC96F20B59C90000C79CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDBBC94720B59C8F000C79CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDBBC95B20B59C90000C79CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDBBC96620B59C90000C79CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDBBC94120B59C8F000C79CC = {
+			isa = PBXGroup;
+			children = (
+				BDBBC94C20B59C8F000C79CC /* mysun-gugudan-viewer-ipad */,
+				BDBBC96120B59C90000C79CC /* mysun-gugudan-viewer-ipadTests */,
+				BDBBC96C20B59C90000C79CC /* mysun-gugudan-viewer-ipadUITests */,
+				BDBBC94B20B59C8F000C79CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDBBC94B20B59C8F000C79CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDBBC94A20B59C8F000C79CC /* mysun-gugudan-viewer-ipad.app */,
+				BDBBC95E20B59C90000C79CC /* mysun-gugudan-viewer-ipadTests.xctest */,
+				BDBBC96920B59C90000C79CC /* mysun-gugudan-viewer-ipadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDBBC94C20B59C8F000C79CC /* mysun-gugudan-viewer-ipad */ = {
+			isa = PBXGroup;
+			children = (
+				BDBBC94D20B59C8F000C79CC /* AppDelegate.swift */,
+				BDBBC94F20B59C8F000C79CC /* ViewController.swift */,
+				BDBBC95120B59C8F000C79CC /* Main.storyboard */,
+				BDBBC95420B59C90000C79CC /* Assets.xcassets */,
+				BDBBC95620B59C90000C79CC /* LaunchScreen.storyboard */,
+				BDBBC95920B59C90000C79CC /* Info.plist */,
+			);
+			path = "mysun-gugudan-viewer-ipad";
+			sourceTree = "<group>";
+		};
+		BDBBC96120B59C90000C79CC /* mysun-gugudan-viewer-ipadTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDBBC96220B59C90000C79CC /* mysun_gugudan_viewer_ipadTests.swift */,
+				BDBBC96420B59C90000C79CC /* Info.plist */,
+			);
+			path = "mysun-gugudan-viewer-ipadTests";
+			sourceTree = "<group>";
+		};
+		BDBBC96C20B59C90000C79CC /* mysun-gugudan-viewer-ipadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDBBC96D20B59C90000C79CC /* mysun_gugudan_viewer_ipadUITests.swift */,
+				BDBBC96F20B59C90000C79CC /* Info.plist */,
+			);
+			path = "mysun-gugudan-viewer-ipadUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDBBC94920B59C8F000C79CC /* mysun-gugudan-viewer-ipad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDBBC97220B59C90000C79CC /* Build configuration list for PBXNativeTarget "mysun-gugudan-viewer-ipad" */;
+			buildPhases = (
+				BDBBC94620B59C8F000C79CC /* Sources */,
+				BDBBC94720B59C8F000C79CC /* Frameworks */,
+				BDBBC94820B59C8F000C79CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mysun-gugudan-viewer-ipad";
+			productName = "mysun-gugudan-viewer-ipad";
+			productReference = BDBBC94A20B59C8F000C79CC /* mysun-gugudan-viewer-ipad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDBBC95D20B59C90000C79CC /* mysun-gugudan-viewer-ipadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDBBC97520B59C90000C79CC /* Build configuration list for PBXNativeTarget "mysun-gugudan-viewer-ipadTests" */;
+			buildPhases = (
+				BDBBC95A20B59C90000C79CC /* Sources */,
+				BDBBC95B20B59C90000C79CC /* Frameworks */,
+				BDBBC95C20B59C90000C79CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDBBC96020B59C90000C79CC /* PBXTargetDependency */,
+			);
+			name = "mysun-gugudan-viewer-ipadTests";
+			productName = "mysun-gugudan-viewer-ipadTests";
+			productReference = BDBBC95E20B59C90000C79CC /* mysun-gugudan-viewer-ipadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDBBC96820B59C90000C79CC /* mysun-gugudan-viewer-ipadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDBBC97820B59C90000C79CC /* Build configuration list for PBXNativeTarget "mysun-gugudan-viewer-ipadUITests" */;
+			buildPhases = (
+				BDBBC96520B59C90000C79CC /* Sources */,
+				BDBBC96620B59C90000C79CC /* Frameworks */,
+				BDBBC96720B59C90000C79CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDBBC96B20B59C90000C79CC /* PBXTargetDependency */,
+			);
+			name = "mysun-gugudan-viewer-ipadUITests";
+			productName = "mysun-gugudan-viewer-ipadUITests";
+			productReference = BDBBC96920B59C90000C79CC /* mysun-gugudan-viewer-ipadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDBBC94220B59C8F000C79CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = dazzilove;
+				TargetAttributes = {
+					BDBBC94920B59C8F000C79CC = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					BDBBC95D20B59C90000C79CC = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = BDBBC94920B59C8F000C79CC;
+					};
+					BDBBC96820B59C90000C79CC = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = BDBBC94920B59C8F000C79CC;
+					};
+				};
+			};
+			buildConfigurationList = BDBBC94520B59C8F000C79CC /* Build configuration list for PBXProject "mysun-gugudan-viewer-ipad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDBBC94120B59C8F000C79CC;
+			productRefGroup = BDBBC94B20B59C8F000C79CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDBBC94920B59C8F000C79CC /* mysun-gugudan-viewer-ipad */,
+				BDBBC95D20B59C90000C79CC /* mysun-gugudan-viewer-ipadTests */,
+				BDBBC96820B59C90000C79CC /* mysun-gugudan-viewer-ipadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDBBC94820B59C8F000C79CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDBBC95820B59C90000C79CC /* LaunchScreen.storyboard in Resources */,
+				BDBBC95520B59C90000C79CC /* Assets.xcassets in Resources */,
+				BDBBC95320B59C8F000C79CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDBBC95C20B59C90000C79CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDBBC96720B59C90000C79CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDBBC94620B59C8F000C79CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDBBC95020B59C8F000C79CC /* ViewController.swift in Sources */,
+				BDBBC94E20B59C8F000C79CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDBBC95A20B59C90000C79CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDBBC96320B59C90000C79CC /* mysun_gugudan_viewer_ipadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDBBC96520B59C90000C79CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDBBC96E20B59C90000C79CC /* mysun_gugudan_viewer_ipadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDBBC96020B59C90000C79CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDBBC94920B59C8F000C79CC /* mysun-gugudan-viewer-ipad */;
+			targetProxy = BDBBC95F20B59C90000C79CC /* PBXContainerItemProxy */;
+		};
+		BDBBC96B20B59C90000C79CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDBBC94920B59C8F000C79CC /* mysun-gugudan-viewer-ipad */;
+			targetProxy = BDBBC96A20B59C90000C79CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDBBC95120B59C8F000C79CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDBBC95220B59C8F000C79CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDBBC95620B59C90000C79CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDBBC95720B59C90000C79CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDBBC97020B59C90000C79CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDBBC97120B59C90000C79CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDBBC97320B59C90000C79CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "mysun-gugudan-viewer-ipad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dazzilove.mysun.gugudan.viewer.ipad.mysun-gugudan-viewer-ipad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDBBC97420B59C90000C79CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "mysun-gugudan-viewer-ipad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dazzilove.mysun.gugudan.viewer.ipad.mysun-gugudan-viewer-ipad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDBBC97620B59C90000C79CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KD44Z3NMCL;
+				INFOPLIST_FILE = "mysun-gugudan-viewer-ipadTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dazzilove.mysun.gugudan.viewer.ipad.mysun-gugudan-viewer-ipadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mysun-gugudan-viewer-ipad.app/mysun-gugudan-viewer-ipad";
+			};
+			name = Debug;
+		};
+		BDBBC97720B59C90000C79CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KD44Z3NMCL;
+				INFOPLIST_FILE = "mysun-gugudan-viewer-ipadTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dazzilove.mysun.gugudan.viewer.ipad.mysun-gugudan-viewer-ipadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mysun-gugudan-viewer-ipad.app/mysun-gugudan-viewer-ipad";
+			};
+			name = Release;
+		};
+		BDBBC97920B59C90000C79CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KD44Z3NMCL;
+				INFOPLIST_FILE = "mysun-gugudan-viewer-ipadUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dazzilove.mysun.gugudan.viewer.ipad.mysun-gugudan-viewer-ipadUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "mysun-gugudan-viewer-ipad";
+			};
+			name = Debug;
+		};
+		BDBBC97A20B59C90000C79CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KD44Z3NMCL;
+				INFOPLIST_FILE = "mysun-gugudan-viewer-ipadUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dazzilove.mysun.gugudan.viewer.ipad.mysun-gugudan-viewer-ipadUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "mysun-gugudan-viewer-ipad";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDBBC94520B59C8F000C79CC /* Build configuration list for PBXProject "mysun-gugudan-viewer-ipad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDBBC97020B59C90000C79CC /* Debug */,
+				BDBBC97120B59C90000C79CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDBBC97220B59C90000C79CC /* Build configuration list for PBXNativeTarget "mysun-gugudan-viewer-ipad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDBBC97320B59C90000C79CC /* Debug */,
+				BDBBC97420B59C90000C79CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDBBC97520B59C90000C79CC /* Build configuration list for PBXNativeTarget "mysun-gugudan-viewer-ipadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDBBC97620B59C90000C79CC /* Debug */,
+				BDBBC97720B59C90000C79CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDBBC97820B59C90000C79CC /* Build configuration list for PBXNativeTarget "mysun-gugudan-viewer-ipadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDBBC97920B59C90000C79CC /* Debug */,
+				BDBBC97A20B59C90000C79CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDBBC94220B59C8F000C79CC /* Project object */;
+}
