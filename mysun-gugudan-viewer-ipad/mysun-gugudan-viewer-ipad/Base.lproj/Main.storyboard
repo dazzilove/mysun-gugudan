@@ -81,6 +81,9 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnConfirmOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jKa-nQ-FMh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="안내 메시지가 표시됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8m9-iC-fE0">
                                 <rect key="frame" x="43" y="315" width="431" height="21"/>
@@ -108,6 +111,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnConfirm" destination="TaU-m8-CPJ" id="h7l-DA-XU5"/>
                         <outlet property="lblAlertText" destination="8m9-iC-fE0" id="NfV-un-VkU"/>
                         <outlet property="lblDateTitle" destination="532-WE-fZi" id="bbZ-Ul-CSH"/>
                         <outlet property="lblQuestion" destination="6zc-7m-R9r" id="XTH-ei-wU9"/>
