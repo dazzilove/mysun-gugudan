@@ -8,14 +8,14 @@
 
 import UIKit
 
-private var questionList = Array<Question>()
-private var answerList = Array<Answer>()
-private var questionNumber = 0
-private var startTime = Date()
-private var endTime = Date()
-private let txtAnswersDefaultText = "Answers... \n"
-
 class ViewController: UIViewController {
+    
+    private var questionList = Array<Question>()
+    private var answerList = Array<Answer>()
+    private var questionNumber = 0
+    private var startTime = Date()
+    private var endTime = Date()
+    private let txtAnswersDefaultText = "Answers... \n"
     
     @IBOutlet weak var lblDateTitle: UILabel!
     @IBOutlet weak var lblQuestion: UILabel!
@@ -25,12 +25,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnReset: UIButton!
     @IBOutlet weak var lblDuringTime: UILabel!
     @IBOutlet weak var txtAnswers: UITextView!
+    @IBOutlet weak var btnStart: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         initPage()
+        btnConfirm.isEnabled = false;
+        btnReset.isEnabled = false;
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,22 +120,8 @@ class ViewController: UIViewController {
         lblAlertText.textColor = alertTextColor;
     }
     
-    func makeQuesionList() -> Array<Question> {
-        var questionList = Array<Question>()
-        questionList.append(Question.init(questionNo: 0,questionX: 2,questtionY: 1))
-        questionList.append(Question.init(questionNo: 1,questionX: 2,questtionY: 2))
-        questionList.append(Question.init(questionNo: 2,questionX: 2,questtionY: 3))
-        questionList.append(Question.init(questionNo: 3,questionX: 2,questtionY: 4))
-        questionList.append(Question.init(questionNo: 4,questionX: 2,questtionY: 5))
-        questionList.append(Question.init(questionNo: 5,questionX: 2,questtionY: 6))
-        questionList.append(Question.init(questionNo: 6,questionX: 2,questtionY: 7))
-        questionList.append(Question.init(questionNo: 7,questionX: 2,questtionY: 8))
-        questionList.append(Question.init(questionNo: 8,questionX: 2,questtionY: 9))
-        return questionList
-    }
-    
     func makeRandomQuesionList() -> Array<Question> {
-        var questionList = makeQuesionList()
+        var questionList = self.questionList
         var randomList = Array<Question>()
         
         let questionListSize = questionList.count
@@ -195,13 +184,48 @@ class ViewController: UIViewController {
         txtAnswers.text = text
     }
     
+    func makeQuesionList() -> Void {
+        self.btnStart.setTitle("학습정보 로드 중입니다. 잠시만 기다려주세요.", for: .normal)
+        let url = URL(string: "http://localhost:8080/questions")
+        let session = URLSession.shared // or let session = URLSession(configuration: URLSessionConfiguration.default)
+        
+        if let usableUrl = url {
+            let task = session.dataTask(with: usableUrl, completionHandler: { (data, response, error) in
+                if let resultData = data {
+                    do {
+                        let jsonResult = try JSONSerialization.jsonObject(with: resultData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSArray
+                        
+                        for tempObj in jsonResult {
+                            let tempObjDic = tempObj as? [String: Int]
+                            let question = Question(questionNo: tempObjDic!["questionNo"] as! Int
+                                , xvalue: tempObjDic!["xvalue"] as! Int
+                                , yvalue: tempObjDic!["yvalue"] as! Int)
+                            self.questionList.append(question)
+                        }
+                        self.btnStart.isHidden = true
+                        self.setQuestionInfo()
+                        self.btnConfirm.isEnabled = true
+                        self.btnReset.isEnabled = true
+                    } catch {
+                        print("ddd")
+                    }
+                }
+            })
+            task.resume()
+        }
+    }
+    
+    @IBAction func btnStartOnClick(_ sender: UIButton) {
+        makeQuesionList()
+    }
+    
     @IBAction func btnConfirmOnClick(_ sender: UIButton) {
         addAnswer()
         showAnswers()
         setQuestionInfo()
     }
     
-    @IBAction func btnResetOnClick(_ sender: Any) {
+    @IBAction func btnResetOnClick(_ sender: UIButton) {
         initPage()
     }
     
