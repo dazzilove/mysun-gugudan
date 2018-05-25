@@ -8,7 +8,7 @@
 
 import UIKit
 
-private var questionList = Array<String>()
+private var questionList = Array<Question>()
 private var answerList = Array<Answer>()
 private var questionNumber = 0
 private var startTime = Date()
@@ -83,6 +83,10 @@ class ViewController: UIViewController {
         return String("\(year)년 \(month)월 \(day)일 \(surfixText)")
     }
     
+    func makeQuestion(question: Question) -> String {
+        return makeQuestion(orgText: question.getQuestion())
+    }
+    
     func makeQuestion(orgText:String) -> String {
         let questionParams = orgText.split(separator: ",")
         return String("\(questionParams[0]) X \(questionParams[1])");
@@ -113,25 +117,23 @@ class ViewController: UIViewController {
         lblAlertText.textColor = alertTextColor;
     }
     
-    func makeQuesionList() -> Array<String> {
-        var questionList = Array<String>()
-        
-        questionList.append("2,1")
-        questionList.append("2,2")
-        questionList.append("2,3")
-        questionList.append("2,4")
-        questionList.append("2,5")
-        questionList.append("2,6")
-        questionList.append("2,7")
-        questionList.append("2,8")
-        questionList.append("2,9")
-        
+    func makeQuesionList() -> Array<Question> {
+        var questionList = Array<Question>()
+        questionList.append(Question.init(questionNo: 0,questionX: 2,questtionY: 1))
+        questionList.append(Question.init(questionNo: 1,questionX: 2,questtionY: 2))
+        questionList.append(Question.init(questionNo: 2,questionX: 2,questtionY: 3))
+        questionList.append(Question.init(questionNo: 3,questionX: 2,questtionY: 4))
+        questionList.append(Question.init(questionNo: 4,questionX: 2,questtionY: 5))
+        questionList.append(Question.init(questionNo: 5,questionX: 2,questtionY: 6))
+        questionList.append(Question.init(questionNo: 6,questionX: 2,questtionY: 7))
+        questionList.append(Question.init(questionNo: 7,questionX: 2,questtionY: 8))
+        questionList.append(Question.init(questionNo: 8,questionX: 2,questtionY: 9))
         return questionList
     }
     
-    func makeRandomQuesionList() -> Array<String> {
+    func makeRandomQuesionList() -> Array<Question> {
         var questionList = makeQuesionList()
-        var randomList = Array<String>()
+        var randomList = Array<Question>()
         
         let questionListSize = questionList.count
         for _ in 0..<questionListSize {
@@ -152,7 +154,7 @@ class ViewController: UIViewController {
         startTime = Date()
         lblDuringTime.text = makeStartTimeText(date: startTime)
         
-        lblQuestion.text = makeQuestion(orgText: questionList[questionNumber]);
+        lblQuestion.text = makeQuestion(question: questionList[questionNumber]);
         lblQuestionNumber.text = makeQuesionPosition()
         makeAlertText()
         
@@ -184,7 +186,7 @@ class ViewController: UIViewController {
         var text = txtAnswersDefaultText
         txtAnswers.text = text
         for answer in answerList {
-            let question = makeQuestion(orgText: answer.quesion)
+            let question = makeQuestion(question: answer.quesion)
             let startTime = makeStartTimeText(date: answer.startTime)
             let endTime = makeEndTimeText(date: answer.endTime)
             let answerInfo = String("\(question), \(startTime), \(endTime) \n")
