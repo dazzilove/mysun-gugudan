@@ -15,6 +15,9 @@ class Answer {
     var endTime: Date
     
     init(question: String) {
-        self.quesion = quesion
+        self.quesion = question
+        self.answer = ""
+        self.startTime = Date()
+        self.endTime = Date()
     }
 }
