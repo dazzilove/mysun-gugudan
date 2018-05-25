@@ -13,4 +13,5 @@ public class MemberService {
     public Member save(Member member) {
         return memberDao.save(member);
     }
+    public Iterable<Member> list() { return memberDao.findAll(); }
 }
