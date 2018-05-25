@@ -18,14 +18,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblAlertText: UILabel!
     @IBOutlet weak var lblQuestionNumber: UILabel!
     @IBOutlet weak var btnConfirm: UIButton!
+    @IBOutlet weak var btnReset: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        lblDateTitle.text = makeDateTitle()
-        questionList = makeRandomQuesionList()
-        setQuestionInfo()
+        initPage()
     }
     
     override func didReceiveMemoryWarning() {
@@ -119,9 +118,20 @@ class ViewController: UIViewController {
         questionNumber = questionNumber + 1;
     }
     
+    func initPage() {
+        questionNumber = 0
+        lblDateTitle.text = makeDateTitle()
+        questionList = makeRandomQuesionList()
+        setQuestionInfo()
+    }
+    
     @IBAction func btnConfirmOnClick(_ sender: UIButton) {
         setQuestionInfo()
     }
+    @IBAction func btnResetOnClick(_ sender: Any) {
+        initPage()
+    }
+    
     
     
     
