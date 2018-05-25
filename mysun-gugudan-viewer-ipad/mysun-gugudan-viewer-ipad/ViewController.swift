@@ -9,9 +9,11 @@
 import UIKit
 
 private var questionList = Array<String>()
+private var answerList = Array<Answer>()
 private var questionNumber = 0
 private var startTime = Date()
 private var endTime = Date()
+private let txtAnswersDefaultText = "Answers... \n"
 
 class ViewController: UIViewController {
     
@@ -22,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnConfirm: UIButton!
     @IBOutlet weak var btnReset: UIButton!
     @IBOutlet weak var lblDuringTime: UILabel!
+    @IBOutlet weak var txtAnswers: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +40,11 @@ class ViewController: UIViewController {
     
     func initPage() {
         questionNumber = 0
+        answerList = Array<Answer>()
         
         lblDateTitle.text = makeDateTitle()
         questionList = makeRandomQuesionList()
+        txtAnswers.text = txtAnswersDefaultText
         setQuestionInfo()
     }
     
@@ -51,6 +56,11 @@ class ViewController: UIViewController {
     func makeStartTimeText(date:Date) -> String {
         let timeText = makeTimeText(date: date)
         return String("Start Time = \(timeText)")
+    }
+    
+    func makeEndTimeText(date:Date) -> String {
+        let timeText = makeTimeText(date: date)
+        return String("End Time = \(timeText)")
     }
     
     func makeTimeText(date: Date) -> String {
@@ -135,8 +145,7 @@ class ViewController: UIViewController {
     }
     
     func setQuestionInfo() {
-        let questionListSize = questionList.count
-        if (questionListSize == questionNumber) {
+        if(isOverQuestionList()) {
             return
         }
         
@@ -150,11 +159,46 @@ class ViewController: UIViewController {
         questionNumber = questionNumber + 1;
     }
     
-    @IBAction func btnConfirmOnClick(_ sender: UIButton) {
+    func addAnswer() -> Void {
+        if(isOverQuestionList()) {
+            return
+        }
         
-        // 현재 질문에 대한 답변 관련 정보 등록 - todo
+        endTime = Date()
+        
+        let answer = Answer(question: questionList[questionNumber])
+        answer.startTime = startTime
+        answer.endTime = endTime
+        answerList.append(answer.self)
+    }
+    
+    func isOverQuestionList() -> Bool {
+        let questionListSize = questionList.count
+        if (questionListSize == questionNumber) {
+            return true
+        }
+        return false
+    }
+    
+    func showAnswers() -> Void {
+        var text = txtAnswersDefaultText
+        txtAnswers.text = text
+        for answer in answerList {
+            let question = makeQuestion(orgText: answer.quesion)
+            let startTime = makeStartTimeText(date: answer.startTime)
+            let endTime = makeEndTimeText(date: answer.endTime)
+            let answerInfo = String("\(question), \(startTime), \(endTime) \n")
+            text = text + answerInfo
+        }
+        txtAnswers.text = text
+    }
+    
+    @IBAction func btnConfirmOnClick(_ sender: UIButton) {
+        addAnswer()
+        showAnswers()
         setQuestionInfo()
     }
+    
     @IBAction func btnResetOnClick(_ sender: Any) {
         initPage()
     }
