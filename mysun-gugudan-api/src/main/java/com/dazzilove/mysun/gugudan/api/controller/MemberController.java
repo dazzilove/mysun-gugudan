@@ -3,10 +3,7 @@ package com.dazzilove.mysun.gugudan.api.controller;
 import com.dazzilove.mysun.gugudan.api.domain.Member;
 import com.dazzilove.mysun.gugudan.api.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MemberController {
@@ -29,5 +26,10 @@ public class MemberController {
         Member newMember = memberService.save(member);
 
         return newMember.toString();
+    }
+
+    @GetMapping(value = "/members")
+    public Iterable<Member> members() {
+        return memberService.list();
     }
 }
