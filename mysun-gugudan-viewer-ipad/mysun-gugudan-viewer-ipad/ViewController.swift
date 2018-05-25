@@ -9,7 +9,9 @@
 import UIKit
 
 private var questionList = Array<String>()
-private var questionNumber = 0;
+private var questionNumber = 0
+private var startTime = Date()
+private var endTime = Date()
 
 class ViewController: UIViewController {
     
@@ -19,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblQuestionNumber: UILabel!
     @IBOutlet weak var btnConfirm: UIButton!
     @IBOutlet weak var btnReset: UIButton!
+    @IBOutlet weak var lblDuringTime: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,32 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func initPage() {
+        questionNumber = 0
+        
+        lblDateTitle.text = makeDateTitle()
+        questionList = makeRandomQuesionList()
+        setQuestionInfo()
+    }
+    
+    func makeDuringTimeText(startDate: Date) -> String {
+        let startTimeText = makeStartTimeText(date: startDate)
+        return String("\(startTimeText)")
+    }
+    
+    func makeStartTimeText(date:Date) -> String {
+        let timeText = makeTimeText(date: date)
+        return String("Start Time = \(timeText)")
+    }
+    
+    func makeTimeText(date: Date) -> String {
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+        let second = calendar.component(.second, from: date)
+        return String("\(hour):\(minute):\(second)")
     }
     
     func makeDateTitle() -> String {
@@ -111,6 +140,9 @@ class ViewController: UIViewController {
             return
         }
         
+        startTime = Date()
+        lblDuringTime.text = makeStartTimeText(date: startTime)
+        
         lblQuestion.text = makeQuestion(orgText: questionList[questionNumber]);
         lblQuestionNumber.text = makeQuesionPosition()
         makeAlertText()
@@ -118,14 +150,9 @@ class ViewController: UIViewController {
         questionNumber = questionNumber + 1;
     }
     
-    func initPage() {
-        questionNumber = 0
-        lblDateTitle.text = makeDateTitle()
-        questionList = makeRandomQuesionList()
-        setQuestionInfo()
-    }
-    
     @IBAction func btnConfirmOnClick(_ sender: UIButton) {
+        
+        // 현재 질문에 대한 답변 관련 정보 등록 - todo
         setQuestionInfo()
     }
     @IBAction func btnResetOnClick(_ sender: Any) {
