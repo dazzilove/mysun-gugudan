@@ -126,12 +126,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Answers..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J3i-rD-op1">
-                                <rect key="frame" x="33" y="362" width="607" height="199"/>
+                                <rect key="frame" x="33" y="362" width="607" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upa-rm-CPX">
+                                <rect key="frame" x="33" y="545" width="607" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41503063309999999" green="0.60454790030000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="학습 시작">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnStartOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1e9-Ne-GC2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -139,6 +151,7 @@
                     <connections>
                         <outlet property="btnConfirm" destination="TaU-m8-CPJ" id="h7l-DA-XU5"/>
                         <outlet property="btnReset" destination="cpD-QJ-eAT" id="O9F-NV-Hyk"/>
+                        <outlet property="btnStart" destination="Upa-rm-CPX" id="ugl-6E-G9h"/>
                         <outlet property="lblAlertText" destination="8m9-iC-fE0" id="NfV-un-VkU"/>
                         <outlet property="lblDateTitle" destination="532-WE-fZi" id="bbZ-Ul-CSH"/>
                         <outlet property="lblDuringTime" destination="L3J-qa-Dm3" id="NaF-DJ-Vf2"/>
