@@ -106,12 +106,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-QJ-eAT">
+                                <rect key="frame" x="538" y="74" width="102" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.14672872840832107" green="0.6856076734324329" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="문제 초기화">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnResetOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uuf-3x-Xz1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="btnConfirm" destination="TaU-m8-CPJ" id="h7l-DA-XU5"/>
+                        <outlet property="btnReset" destination="cpD-QJ-eAT" id="O9F-NV-Hyk"/>
                         <outlet property="lblAlertText" destination="8m9-iC-fE0" id="NfV-un-VkU"/>
                         <outlet property="lblDateTitle" destination="532-WE-fZi" id="bbZ-Ul-CSH"/>
                         <outlet property="lblQuestion" destination="6zc-7m-R9r" id="XTH-ei-wU9"/>
@@ -120,6 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.84375" y="120.70312499999999"/>
         </scene>
     </scenes>
 </document>
