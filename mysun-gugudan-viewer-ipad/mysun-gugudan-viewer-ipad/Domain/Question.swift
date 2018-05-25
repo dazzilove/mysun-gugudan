@@ -1,15 +1,15 @@
-class Question {
+class Question: Decodable {
     var questionNo: Int
-    var questionX: Int
-    var questionY: Int
+    var xvalue: Int
+    var yvalue: Int
     
-    init(questionNo: Int, questionX: Int, questtionY: Int) {
+    init(questionNo: Int, xvalue: Int, yvalue: Int) {
         self.questionNo = questionNo
-        self.questionX = questionX
-        self.questionY = questtionY
+        self.xvalue = xvalue
+        self.yvalue = yvalue
     }
     
     func getQuestion() -> String {
-        return String(self.questionX) + "," + String(self.questionY)
+        return String(self.xvalue) + "," + String(self.yvalue)
     }
 }
