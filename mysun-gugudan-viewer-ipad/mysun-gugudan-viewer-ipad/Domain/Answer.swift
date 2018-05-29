@@ -2,15 +2,11 @@
 import Foundation
 
 class Answer {
-    let quesion: Question
+    let question: Question
     var answer: String
-    var startTime: Date
-    var endTime: Date
     
     init(question: Question) {
-        self.quesion = question
+        self.question = question
         self.answer = ""
-        self.startTime = Date()
-        self.endTime = Date()
     }
 }
